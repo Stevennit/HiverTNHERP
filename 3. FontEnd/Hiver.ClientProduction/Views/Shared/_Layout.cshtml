@@ -1,0 +1,72 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>Pages - Admin Dashboard UI Kit - Blank Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <link rel="apple-touch-icon" href="pages/ico/60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="pages/ico/120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="pages/ico/152.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta content="Meet pages - The simplest and fastest way to build web UI for your dashboard or app." name="description" />
+    <meta content="Ace" name="author" />
+
+    <!-- Telerik -->
+    <script src="../Custom/Telerik/jquery.min.js"></script>
+    <script src="../Custom/Telerik/kendo.all.min.js"></script>
+    <script src="../Custom/Telerik/kendo.aspnetmvc.min.js"></script>
+
+    <!-- Arctic Admin Template -->
+    <script src="~/Custom/fontawesome.js"></script>
+    <link rel="stylesheet" href="../Arctic/assets/css/vendors.bundle.min.css" />
+    <link href="../Arctic/github.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../Arctic/assets/css/main.bundle.min.css" />
+
+    <!-- Hiver Custom -->
+    <link href="../Custom/Hiver.css" rel="stylesheet" />
+
+
+</head>
+<body>
+
+    <div class="app-admin-wrap-layout-1 sidebar-full sidebar-theme-slate">
+        @await Html.PartialAsync("_SideBar.cshtml")
+        <div class="main-content-wrap">
+            @await Html.PartialAsync("_Header.cshtml")
+            <!-- Start:: content body-->
+            <div class="main-content-body">
+                <div class="container-fluid pt-2">
+                    @RenderBody()
+                </div>
+                <!-- Start:: content (Your custom content)-->
+                <!-- Start:: Footer-->
+                <div class="flex-grow-1"></div>
+                <div class="bg-card px-lg py-md d-flex justify-content-between align-items-center flex-wrap shadow-6dp">
+                    <p class="text-muted m-0">TNH ERP System by Steven Version 2021</p>
+                </div>
+                <!-- End:: Footer-->
+            </div>
+            <!-- End:: content body-->
+        </div>
+    </div>
+    <!--begin::sidebar-panel-notification-->
+    @await Html.PartialAsync("_Notification.cshtml")
+    <!--end::sidebar-panel-notification-->
+    <!--Sidebar panel Profile-->
+    @await Html.PartialAsync("_Profile.cshtml")
+    <div class="ul-sidebar-panel-overlay"></div>
+
+    <!-- BEGIN VENDOR JS -->
+    <script src="../Arctic/assets/js/vendors.bundle.min.js"></script>
+    <script src="../Arctic/assets/js/main.bundle.min.js"></script>
+    <script src="../Arctic/highlight.min.js"></script>
+    <script src="../Arctic/assets/js/pages/doc.script.min.js"></script>
+    <!-- END PAGE LEVEL JS -->
+</body>
+</html>
